@@ -11,7 +11,7 @@ root.render(
   <React.StrictMode>
     
     {/* <Registration /> */}
-    <App></App>
+    <App/>
    
   </React.StrictMode>
 );

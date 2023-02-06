@@ -38,7 +38,7 @@ class Registration extends React.Component{
             fields["confirmpassword"]=""
             this.setState({fields:fields});
             alert("User is successfully registerd");
-            window.location.href="/login"
+            // window.location.href="/login"
         }
   
       }
