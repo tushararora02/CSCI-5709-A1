@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css'
+
 class Reset extends React.Component {
     
     constructor() {
@@ -22,9 +23,9 @@ class Reset extends React.Component {
         fields
     });
 
-  }
+  };
 
-
+   
   userreset(item) {
     item.preventDefault();
     if (this.formValidation()) {
@@ -34,8 +35,7 @@ class Reset extends React.Component {
         fields["confirmpassword"]=""
         this.setState({fields:fields});
         alert("password is successfully changed");
-        
-        // window.location.href="/login"
+       
 
     }
     else{
