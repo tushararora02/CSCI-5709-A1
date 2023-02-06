@@ -1,7 +1,9 @@
 import React from 'react';
 import './App.css'
+import { Link } from 'react-router-dom';
 
 class Login extends React.Component{
+
 
     constructor() {
         super();
@@ -14,6 +16,9 @@ class Login extends React.Component{
         this.userLogin = this.userLogin.bind(this);
   
       };
+
+
+   
 
       manageState(variable){
 
@@ -136,8 +141,12 @@ class Login extends React.Component{
 
             <input type="submit" className="button"  value="Login"/>
             </form>
-            <p>New to the platform? <a href="/register">Register</a></p>
-            <p>reset password <a href="/reset">reset</a></p>
+          
+            
+            <Link to="/register">New to the platform? Register</Link>
+            <br></br>
+            <Link to="/reset">reset password</Link>
+            
         </div>
     </div>
     
@@ -145,6 +154,11 @@ class Login extends React.Component{
       }
 
 
+
+
+
 }
+
+
 
 export default Login;

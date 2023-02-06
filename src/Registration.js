@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
 
 class Registration extends React.Component{
@@ -104,7 +105,7 @@ class Registration extends React.Component{
             formvalid=false
             errorresponse["confirmpassword"]=" confirm password is missing!"
         }
-        
+     
 
         if(typeof fields["confirmpassword"]!=="undefined"){
             if(fields["confirmpassword"]===fields["password"]){
@@ -168,7 +169,8 @@ class Registration extends React.Component{
 
             <input type="submit" className="button"  value="Register"/>
             </form>
-            <p>Already a user? <a href="/login">Login</a></p>
+            <Link to="/login">Already a user? login</Link>
+            
         </div>
     </div>
     
