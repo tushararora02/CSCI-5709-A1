@@ -34,7 +34,8 @@ class Reset extends React.Component {
         fields["confirmpassword"]=""
         this.setState({fields:fields});
         alert("password is successfully changed");
-        window.location.href="/login"
+        
+        // window.location.href="/login"
 
     }
     else{
