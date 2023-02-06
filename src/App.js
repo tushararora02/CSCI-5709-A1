@@ -6,9 +6,9 @@ import Home from './Home';
 import Reset from './reset';
 function App() {
   return (
-    <BrowserRouter>
+  <BrowserRouter>
  <Routes>
-  <Route index element={<Home/>}/> 
+ 
   <Route path='/' element={<Home/>}/> 
 
   <Route path='/login' element={<Login/>}/> 

@@ -9,10 +9,10 @@ import Login from './login';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    
     {/* <Registration /> */}
     <App></App>
-    </BrowserRouter>
+   
   </React.StrictMode>
 );
 reportWebVitals();
