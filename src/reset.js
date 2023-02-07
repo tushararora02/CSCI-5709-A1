@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './App.css'
 
 class Reset extends React.Component {
@@ -30,12 +31,11 @@ class Reset extends React.Component {
     item.preventDefault();
     if (this.formValidation()) {
         let fields = {};
-        fields["emailid"] = "";
         fields["password"] = "";
         fields["confirmpassword"]=""
         this.setState({fields:fields});
         alert("password is successfully changed");
-       
+
 
     }
     else{
@@ -49,20 +49,7 @@ class Reset extends React.Component {
     let errorresponse={};
     let formvalid=true;
 
-    if(!fields["emailid"]){
-        formvalid=false;
-        errorresponse["emailid"]="emailid is missing!";
-
-    }
-
-    if(typeof fields["emailid"]!=="undefined"){
-        if(fields["emailid"].match(/^[_A-Za-z0-9-\+]+(\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9]+)*(\.[A-Za-z]{2,})$/)){
-            formvalid=true
-        }
-        else{
-            formvalid=false
-            errorresponse["emailid"]="please provide valid email id!"
-        }
+  
 
     if(!fields["password"]){
         formvalid=false
@@ -97,8 +84,6 @@ class Reset extends React.Component {
         }
 
     }
-    }
-
     
 
     this.setState({
@@ -115,9 +100,6 @@ class Reset extends React.Component {
      <h3 style={{fontSize:'24px', textAlign:'center'}}>Reset Page</h3>
         <form method="post"  name="userreset"  onSubmit= {this.userreset} >
 
-        <label>Email ID:</label>
-        <input type="text" name="emailid" value={this.state.fields.emailid} onChange={this.manageState}  />
-        <div className="errorMsg">{this.state.errorresponse.emailid}</div>
 
         <label>Password</label>
         <input type="password" name="password" value={this.state.fields.password} onChange={this.manageState} />
@@ -127,8 +109,7 @@ class Reset extends React.Component {
         <input type="password" name="confirmpassword" value={this.state.fields.confirmpassword} onChange={this.manageState} />
         <div className="errorMsg">{this.state.errorresponse.confirmpassword}</div>
         
-        
-        <input type="submit" className="button"  value="Reset"/>
+        <Link to="/login"><input type="submit" className="button"  value="Reset"/></Link>
         </form>
         
     </div>

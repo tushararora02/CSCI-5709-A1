@@ -145,7 +145,7 @@ class Login extends React.Component{
             
             <Link to="/register">New to the platform? Register</Link>
             <br></br>
-            <Link to="/reset">reset password</Link>
+            <Link to="/ResetEmail">reset password</Link>
             
         </div>
     </div>
